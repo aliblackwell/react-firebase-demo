@@ -1,15 +1,18 @@
 import React from 'react'
 import { Formik }  from 'formik'
-
+//import withFirebase from '../database/with-firebase';
 const AddTask = (props) => {
 
     const submitToFirebase = (formValues) => {
         // add the fields to firebase
         // redirect the user to the homepage
         console.log(formValues)
+        window.db.collection("tasks").doc(formValues.name).set(formValues);
     }
 
 
+
+     
     return (
         <div className="AddTask">
             <h1>Add a Task</h1>
