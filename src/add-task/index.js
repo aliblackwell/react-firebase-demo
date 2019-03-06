@@ -1,6 +1,8 @@
 import React from 'react'
 import { Formik }  from 'formik'
 //import withFirebase from '../database/with-firebase';
+
+import './AddTask.css'
 const AddTask = (props) => {
 
     const submitToFirebase = (formValues) => {
@@ -10,9 +12,6 @@ const AddTask = (props) => {
         window.db.collection("tasks").doc(formValues.name).set(formValues);
     }
 
-
-
-     
     return (
         <div className="AddTask">
             <h1>Add a Task</h1>
@@ -46,7 +45,7 @@ const AddTask = (props) => {
                             name="description"
                         />
                         {props.errors.description && <div id="feedback">{props.errors.description}</div>}
-                        <button type="submit">Submit</button>
+                        <button className="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit">Submit</button>
                     </form>
                 )}
             />

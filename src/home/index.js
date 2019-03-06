@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import TaskCardClassFormat from '../components/task-cards/TaskCardClassFormat';
+import TaskCardFunctionalFormat from '../components/task-cards/TaskCardFunctionalFormat';
 const Home = (props) => {
 
     const [tasks, setTasks] = useState(null)
@@ -20,16 +21,13 @@ const Home = (props) => {
     return (
         <div className="Home">
             {!loaded && (
-                <p>Loading</p>
+                <span data-uk-spinner="ratio: 4.5"></span>
             )}
             {loaded && (
                 <section>
                     <h1>Welcome to Task Tracker</h1>
                     {tasks && tasks.map((task) => (
-                        <article>
-                            <h2>{task.name}</h2>
-                            <p>{task.description}</p>
-                        </article>
+                        <TaskCardFunctionalFormat taskName={task.name} taskDescription={task.description} />
                     ))}
                 </section>
             )}
