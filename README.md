@@ -1,3 +1,14 @@
+# React Firebase Demo
+
+This project was put together to help apprentices on the Mobile App Development module at Ada, National College for Digital Skills, work on their projects for Friends of the Earth.
+
+It demonstrates connecting to Firebase. UIKit is used to implement loading animations, buttons and navbars and Formik for handling forms.
+
+It also contains a simple task component written as both a React Class Component and a more functional component that uses hooks.
+
+Browse the commit history to see more.
+___
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
